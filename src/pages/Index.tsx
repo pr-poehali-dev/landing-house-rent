@@ -41,7 +41,7 @@ const Index = () => {
           <img 
             src="https://cdn.poehali.dev/files/c6f67cff-a341-4532-860b-2d8d1b29bea9.PNG" 
             alt="НаВысоте" 
-            className="h-12 md:h-14"
+            className="h-16 md:h-20"
           />
           <div className="hidden md:flex gap-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">
@@ -377,7 +377,7 @@ const Index = () => {
           <img 
             src="https://cdn.poehali.dev/files/c6f67cff-a341-4532-860b-2d8d1b29bea9.PNG" 
             alt="НаВысоте" 
-            className="h-16 mx-auto mb-4 brightness-0 invert"
+            className="h-20 md:h-24 mx-auto mb-4 brightness-0 invert"
           />
           <p className="text-lg">© 2024 НаВысоте. Все права защищены.</p>
         </div>
