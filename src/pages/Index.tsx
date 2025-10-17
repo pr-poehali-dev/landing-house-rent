@@ -31,7 +31,7 @@ const Index = () => {
     { icon: "Trees", title: "Терраса", desc: "Панорамный вид на лес" },
     { icon: "Car", title: "Парковка", desc: "Бесплатная парковка" },
     { icon: "Utensils", title: "Кухня", desc: "Полностью оборудована" },
-    { icon: "Bath", title: "Баня", desc: "Русская баня с вениками" },
+    { icon: "Flame", title: "Мангал", desc: "Зона для барбекю" },
   ];
 
   return (
