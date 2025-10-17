@@ -27,7 +27,7 @@ const Index = () => {
 
   const amenities = [
     { icon: "Wifi", title: "Wi-Fi", desc: "Высокоскоростной интернет" },
-    { icon: "Flame", title: "Камин", desc: "Уютный дровяной камин" },
+    { icon: "Droplets", title: "Чан с подогревом", desc: "Купель под открытым небом" },
     { icon: "Trees", title: "Терраса", desc: "Панорамный вид на лес" },
     { icon: "Car", title: "Парковка", desc: "Бесплатная парковка" },
     { icon: "Utensils", title: "Кухня", desc: "Полностью оборудована" },
