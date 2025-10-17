@@ -372,9 +372,14 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-primary-foreground py-8">
+      <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-lg">© 2024 EcoHouse. Все права защищены.</p>
+          <img 
+            src="https://cdn.poehali.dev/files/c6f67cff-a341-4532-860b-2d8d1b29bea9.PNG" 
+            alt="НаВысоте" 
+            className="h-16 mx-auto mb-4 brightness-0 invert"
+          />
+          <p className="text-lg">© 2024 НаВысоте. Все права защищены.</p>
         </div>
       </footer>
 
