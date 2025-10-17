@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
+  const [showBooking, setShowBooking] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -55,7 +56,10 @@ const Index = () => {
               Контакты
             </a>
           </div>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button 
+            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            onClick={() => setShowBooking(true)}
+          >
             Забронировать
           </Button>
         </div>
@@ -92,6 +96,7 @@ const Index = () => {
           <Button
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8"
+            onClick={() => setShowBooking(true)}
           >
             Забронировать дом
           </Button>
@@ -349,7 +354,11 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="mt-8 pt-8 border-t border-border">
-                  <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">
+                  <Button 
+                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90" 
+                    size="lg"
+                    onClick={() => setShowBooking(true)}
+                  >
                     Забронировать сейчас
                   </Button>
                 </div>
@@ -364,6 +373,68 @@ const Index = () => {
           <p className="text-lg">© 2024 EcoHouse. Все права защищены.</p>
         </div>
       </footer>
+
+      {showBooking && (
+        <div 
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setShowBooking(false)}
+        >
+          <Card 
+            className="max-w-md w-full bg-card border-border animate-fade-in-scale"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <CardContent className="p-8">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold text-foreground">Забронировать</h3>
+                <button 
+                  onClick={() => setShowBooking(false)}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Icon name="X" size={24} />
+                </button>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 p-4 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <Icon name="Phone" size={24} className="text-accent-foreground" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Позвонить</p>
+                    <a 
+                      href="tel:+79001234567" 
+                      className="text-xl font-semibold text-foreground hover:text-accent transition-colors"
+                    >
+                      +7 (900) 123-45-67
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <Icon name="MessageCircle" size={24} className="text-accent-foreground" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Написать в Telegram</p>
+                    <a 
+                      href="https://t.me/ecohouse" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl font-semibold text-foreground hover:text-accent transition-colors"
+                    >
+                      @ecohouse
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-sm text-muted-foreground text-center mt-6">
+                Выберите удобный способ связи для бронирования
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      )}
     </div>
   );
 };
