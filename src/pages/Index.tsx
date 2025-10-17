@@ -38,7 +38,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur z-50 border-b border-border">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-primary">EcoHouse</div>
+          <img 
+            src="https://cdn.poehali.dev/files/c6f67cff-a341-4532-860b-2d8d1b29bea9.PNG" 
+            alt="НаВысоте" 
+            className="h-12 md:h-14"
+          />
           <div className="hidden md:flex gap-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">
               Главная
